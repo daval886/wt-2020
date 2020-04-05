@@ -2,7 +2,7 @@
   "name": "automagazin-wt-2020",
   "version": "1.0.0",
   "description": "Projekt pre webové technológie",
-  "main": "articles.html",
+  "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"

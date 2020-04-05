@@ -5,7 +5,6 @@ function opinion2html(opinion) {
     name: opinion.name,
     email: opinion.email,
     comment: opinion.comment,
-    url: opinion.url,
     createdDate: new Date(opinion.created).toDateString()
   };
 
@@ -22,16 +21,15 @@ function opinionArray2html(sourceData) {
 }
 
 let opinions = [];
-
 const opinionsElm = document.getElementById("opinionsContainer");
 
 if (localStorage.myTreesComments) {
   opinions = JSON.parse(localStorage.myTreesComments);
 }
 
-opinionsElm.innerHTML = opinionArray2html(opinions);
-
 console.log(opinions);
+
+opinionsElm.innerHTML = opinionArray2html(opinions);
 
 let myForm = document.getElementById("feedback");
 myForm.addEventListener("submit", processOpnFrmData);
